@@ -11,5 +11,3 @@ services:
     volumes:
       - /usr/local/bin/docker:/usr/bin/docker
       - /var/run/docker.sock:/var/run/docker.sock
-    user: root
-    privileged: true
