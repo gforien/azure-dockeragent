@@ -4,4 +4,6 @@ WORKDIR /azp
 
 COPY start.ps1 .
 
+RUN curl -fsSL https://get.docker.com/ | sh
+
 CMD powershell .\start.ps1
