@@ -1,0 +1,15 @@
+version: '2'
+services:
+  dockeragent:
+    image: dockeragent:latest
+    build: linux
+    environment:
+      - AZP_URL=${AZP_URL}
+      - AZP_TOKEN=${AZP_TOKEN}
+      - AZP_AGENT_NAME=mydockeragent
+      - AZP_POOL=mydockerpool
+    volumes:
+      - /usr/local/bin/docker:/usr/bin/docker
+      - /var/run/docker.sock:/var/run/docker.sock
+    user: root
+    privileged: true
