@@ -1,11 +1,11 @@
 # azure-dockeragent
 
+![](screenshot.png)
+---
+
 [📚 **Source**](https://docs.microsoft.com/en-us/azure/devops/pipelines/agents/docker)
 
-⚠ Si lancé en mode **Windows container**, ne pas oublier de revenir aux **Linux containers** après.
-
-- AZP_URL = l'URL de l'organisation Azure DevOps
-- AZP_TOKEN = un PAT
+### Build 🏗
 
 ```sh
 d build -t dockeragent:latest linux
@@ -18,3 +18,8 @@ d run --rm `
     -v /var/run/docker.sock:/var/run/docker.sock `
     dockeragent:latest
 ```
+
+- AZP_URL = l'URL de l'organisation Azure DevOps
+- AZP_TOKEN = un PAT
+
+⚠ Si lancé en mode **Windows container**, ne pas oublier de revenir aux **Linux containers** après.
